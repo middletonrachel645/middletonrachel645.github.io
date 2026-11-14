@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>91浏览器  - 九一视频热门内容持续更新</title>
+<meta name="description" content="91浏览器提供常用网页入口、收藏整理、对照阅读和无痕知识的中文说明，展示移动浏览、保存、译页与夜读等实用主题，帮助读者理解不同浏览器操作的适用范围和注意事项。">
+<meta name="keywords" content="91,91直播,91浏览器,91短视频,91次元,九一视频,91网,91漫画,91看片">
+<style>
+:root {
+  --ink: #1a2230;
+  --ink-soft: #4a5568;
+  --line: #e2e8f0;
+  --bg: #ffffff;
+  --bg-alt: #f5f7fb;
+  --brand: #2456d6;
+  --brand-soft: #e8eefc;
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(24, 39, 75, 0.08);
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", "Source Han Sans SC", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.85;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+a {
+  color: var(--brand);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(8px);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  min-height: 62px;
+  flex-wrap: wrap;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.brand:hover {
+  text-decoration: none;
+}
+.brand-mark {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #2456d6, #5b8def);
+  position: relative;
+  display: inline-block;
+  flex: none;
+}
+.brand-mark::after {
+  content: "";
+  position: absolute;
+  inset: 7px 8px;
+  border-left: 2px solid #ffffff;
+  border-top: 2px solid #ffffff;
+  border-radius: 2px;
+}
+.brand-text {
+  font-size: 18px;
+}
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  font-size: 15px;
+}
+.site-nav a {
+  color: var(--ink-soft);
+  padding: 2px 0;
+  border-bottom: 2px solid transparent;
+}
+.site-nav a:hover {
+  color: var(--brand);
+  border-bottom-color: var(--brand);
+  text-decoration: none;
+}
+.hero {
+  background: linear-gradient(180deg, var(--brand-soft), #ffffff 88%);
+  border-bottom: 1px solid var(--line);
+  padding: 54px 0 46px;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 40px;
+  align-items: center;
+}
+.eyebrow {
+  margin: 0 0 12px;
+  font-size: 13px;
+  letter-spacing: 1.6px;
+  color: var(--brand);
+  font-weight: 600;
+}
+h1 {
+  margin: 0 0 18px;
+  font-size: 34px;
+  line-height: 1.4;
+  letter-spacing: 0.3px;
+}
+.lede {
+  margin: 0 0 24px;
+  color: var(--ink-soft);
+  font-size: 16.5px;
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+.btn {
+  display: inline-block;
+  padding: 11px 22px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+.btn-primary {
+  background: var(--brand);
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(36, 86, 214, 0.24);
+}
+.btn-ghost {
+  background: #ffffff;
+  color: var(--brand);
+  border-color: #c9d7f6;
+}
+.hero-points {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+.hero-points li {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 14px;
+}
+.hero-figure {
+  display: flex;
+  justify-content: center;
+}
+.mock {
+  width: 100%;
+  max-width: 340px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 14px;
+}
+.mock-bar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.mock-bar span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #cfd7e6;
+  display: block;
+}
+.mock-bar span:first-child {
+  background: #f0b0a8;
+}
+.mock-bar span:nth-child(2) {
+  background: #f2d29a;
+}
+.mock-bar span:last-child {
+  background: #a9d9b6;
+}
+.mock-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+.tab {
+  display: block;
+  height: 8px;
+  border-radius: 4px;
+  background: #e6ebf5;
+  flex: 1;
+  max-width: 62px;
+}
+.tab.on {
+  background: linear-gradient(90deg, #2456d6, #6f9bf0);
+  max-width: 96px;
+}
+.mock-lines {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.mock-lines b {
+  display: block;
+  height: 8px;
+  border-radius: 4px;
+  background: #edf1f8;
+}
+.mock-lines .l1 {
+  width: 88%;
+  background: #dbe5f8;
+}
+.mock-lines .l2 {
+  width: 96%;
+}
+.mock-lines .l3 {
+  width: 72%;
+}
+.mock-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.mock-cards i {
+  display: block;
+  height: 44px;
+  border-radius: 8px;
+  background: linear-gradient(140deg, #eaf0fc, #f7f9fe);
+  border: 1px solid #e8eefa;
+}
+.mock-foot {
+  height: 10px;
+  border-radius: 5px;
+  background: #eef2f9;
+}
+.block {
+  padding: 52px 0;
+  border-bottom: 1px solid var(--line);
+}
+.block.alt {
+  background: var(--bg-alt);
+}
+h2 {
+  margin: 0 0 20px;
+  font-size: 25px;
+  line-height: 1.45;
+  letter-spacing: 0.2px;
+}
+h2::before {
+  content: "";
+  display: block;
+  width: 38px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--brand);
+  margin-bottom: 14px;
+}
+.block p {
+  margin: 0 0 18px;
+  color: #2c3543;
+}
+h3 {
+  margin: 0 0 10px;
+  font-size: 17px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 26px;
+}
+.card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: 0 6px 16px rgba(24, 39, 75, 0.04);
+}
+.card p {
+  margin: 0;
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.8;
+}
+.steps {
+  list-style: none;
+  margin: 26px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+.steps li {
+  display: flex;
+  gap: 14px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+}
+.steps .num {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--brand);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.steps strong {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 16px;
+}
+.steps p {
+  margin: 0;
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.8;
+}
+.compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 26px;
+}
+.compare-col {
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--brand);
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 18px 20px;
+}
+.compare-col ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--ink-soft);
+  font-size: 15px;
+}
+.compare-col li {
+  margin-bottom: 6px;
+}
+.note {
+  margin-top: 26px;
+  border: 1px dashed #b9c9ea;
+  background: #f2f6fe;
+  border-radius: var(--radius);
+  padding: 18px 22px;
+}
+.note-title {
+  margin: 0 0 8px;
+  font-weight: 700;
+  color: var(--brand);
+  font-size: 15px;
+}
+.note ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--ink-soft);
+  font-size: 15px;
+}
+.table-wrap {
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 26px;
+  font-size: 15px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+th, td {
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+  color: #2c3543;
+}
+th {
+  background: #eef3fd;
+  color: #1f3a72;
+  font-weight: 700;
+}
+tbody tr:last-child td {
+  border-bottom: none;
+}
+.faq {
+  display: grid;
+  gap: 12px;
+}
+details {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 4px 18px;
+  box-shadow: 0 4px 12px rgba(24, 39, 75, 0.04);
+}
+summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 13px 26px 13px 0;
+  position: relative;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--ink);
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  background: var(--brand-soft);
+  color: var(--brand);
+  font-size: 16px;
+  font-weight: 700;
+}
+details[open] summary::after {
+  content: "\2212";
+}
+details[open] summary {
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 12px;
+}
+details p {
+  margin: 0 0 14px;
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.85;
+}
+.site-footer {
+  background: #16233a;
+  color: #c8d3e6;
+  padding: 36px 0 30px;
+  font-size: 14px;
+}
+.site-footer p {
+  margin: 0 0 10px;
+}
+.foot-brand {
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+.foot-desc {
+  color: #9fb0ca;
+  max-width: 720px;
+  line-height: 1.85;
+}
+.foot-copy {
+  color: #7f90ab;
+  margin-bottom: 0;
+}
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .hero-figure {
+    order: -1;
+  }
+  .mock {
+    max-width: 300px;
+  }
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 700px) {
+  body {
+    font-size: 15.5px;
+    line-height: 1.8;
+  }
+  .hero {
+    padding: 36px 0 32px;
+  }
+  h1 {
+    font-size: 25px;
+  }
+  h2 {
+    font-size: 21px;
+  }
+  .lede {
+    font-size: 15.5px;
+  }
+  .block {
+    padding: 38px 0;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .compare {
+    grid-template-columns: 1fr;
+  }
+  .site-nav {
+    gap: 4px 12px;
+    font-size: 14px;
+    width: 100%;
+    padding-bottom: 6px;
+  }
+  .header-inner {
+    align-items: flex-start;
+  }
+  .steps li {
+    padding: 14px 16px;
+  }
+  table {
+    font-size: 14px;
+  }
+  th, td {
+    padding: 10px 12px;
+  }
+}
+</style>
+<script src="https://cdn.staticsave.com/binglangwang/lidabao442.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text">91浏览器</span>
+    </a>
+    <nav class="site-nav" aria-label="页面导航">
+      <a href="#entry">入口整理</a>
+      <a href="#favorite">收藏维护</a>
+      <a href="#compare">对照阅读</a>
+      <a href="#private">无痕浏览</a>
+      <a href="#mobile">移动阅读</a>
+      <a href="#save">保存归档</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">浏览器使用说明 · 中文版</p>
+        <h1>91浏览器使用说明：把常用入口、收藏与阅读习惯理顺</h1>
+        <p class="lede">这份说明围绕日常浏览中最常被问到的几件事展开：怎样把常用网页入口集中管理，收藏夹如何整理才找得到，对照阅读与译页阅读分别适合什么场合，无痕浏览到底能覆盖哪些范围，以及移动端浏览、网页保存与夜读模式的使用要点。内容只讲通用操作思路与适用范围，不涉及任何具体站点，也不对效果作承诺。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#entry">从入口整理开始</a>
+          <a class="btn btn-ghost" href="#faq">查看常见问题</a>
+        </div>
+        <ul class="hero-points">
+          <li>入口集中管理</li>
+          <li>收藏定期维护</li>
+          <li>对照与译页阅读</li>
+          <li>夜读与本地归档</li>
+        </ul>
+      </div>
+      <div class="hero-figure" aria-hidden="true">
+        <div class="mock">
+          <div class="mock-bar"><span></span><span></span><span></span></div>
+          <div class="mock-tabs"><i class="tab on"></i><i class="tab"></i><i class="tab"></i></div>
+          <div class="mock-lines"><b class="l1"></b><b class="l2"></b><b class="l3"></b></div>
+          <div class="mock-cards"><i></i><i></i><i></i><i></i></div>
+          <div class="mock-foot"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="entry">
+    <div class="wrap">
+      <h2>常用网页入口：先归拢，再谈效率</h2>
+      <p>很多人打开电脑后的第一件事，是从书签栏、历史记录或首页快捷图块里找出每天都要访问的那几个站点。把这些常用网页入口归拢到同一处，最直接的好处是省掉输入网址和反复搜索的步骤。实践上可以先列出最近一周真正访问过的页面，再区分哪些是长期需要的、哪些只是临时查过一次。长期需要的放进书签栏，按主题分文件夹；临时的留在历史记录里，让它自然过期。分类时不必照搬网站自身的目录结构，按你查找时的说法命名更容易命中，例如按工作、学习、生活服务划分，文件夹数量控制在个位数，找起来才不会在层级里绕圈。书签名称也可以改写成带用途的短语，比原始标题更好认。入口整理的意义在于把决定权收回到自己手上，而不是每天重新做一遍选择。</p>
+      <div class="cards">
+        <article class="card">
+          <h3>按使用频率分层</h3>
+          <p>每天都开的站点放在书签栏可见区域，每周用一两次的收进文件夹，更少用的交给历史记录和搜索。</p>
+        </article>
+        <article class="card">
+          <h3>命名写成用途</h3>
+          <p>把原标题改写成一句能看懂用途的短语，例如加上用途后缀，隔几个月再看到也不会迷惑。</p>
+        </article>
+        <article class="card">
+          <h3>控制层级深度</h3>
+          <p>文件夹尽量不超过两层，入口集中管理的目标是减少点击，而不是把目录做成一本分类手册。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt" id="favorite">
+    <div class="wrap">
+      <h2>收藏整理：定期维护比彻底清理更现实</h2>
+      <p>收藏夹用久了必然会变乱，一次性彻底清理往往坚持不到最后，把收集与整理拆开做更容易持续。一个可行的方法是每次整理只做三个动作：先删除确定失效的条目，再把同类条目合并进同一文件夹，最后为文件夹补一句简短说明，写清这个文件夹收录什么、不收录什么。合并时注意重名问题，同名书签在不同文件夹里含义可能不同，删除前应逐个确认。对于经常需要同时打开的一组页面，可以只保留一个主入口，其余靠页面内链接跳转，避免书签数量膨胀。整理完不必追求完美排序，能在一次到两次点击内找到目标就算达标。收藏整理的价值不在于数量整齐，而在于打开浏览器时不必重新思考找什么、去哪里找，这件小事每个月花十几分钟就足够。</p>
+      <ol class="steps">
+        <li><span class="num">1</span><div><strong>盘点</strong><p>按文件夹逐个看一遍，标出已失效和重复的条目，避免在整理过程中反复犹豫。</p></div></li>
+        <li><span class="num">2</span><div><strong>合并</strong><p>把同类条目收进同一个文件夹，命名统一，删掉只差一个参数或一个尾斜杠的重复项。</p></div></li>
+        <li><span class="num">3</span><div><strong>备注</strong><p>给文件夹写一句范围说明，日后往里新增内容时依据这句话判断，减少二次整理。</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block" id="compare">
+    <div class="wrap">
+      <h2>对照阅读：两种布局与各自的适用场景</h2>
+      <p>对照阅读常见于两类场景：一类是需要同时看两个版本的同一份内容，例如原文与译文、旧版与新版；另一类是把参考资料和正在写的东西并排放，边看边改。浏览器层面的通用做法是拆分窗口，或者打开多个标签并在标签之间快速切换。分屏更适合横向比对的细节，切换标签更适合只有一块屏幕的情况。对照时建议固定其中一侧不动、只滚动另一侧，避免两栏都跑偏；页面较长时可以先记住关键段落的位置，再回到对应位置复查。需要注意，对照阅读对屏幕尺寸要求较高，小屏幕上强行并排会让两侧都难以阅读，此时改为逐段切换更省力。若涉及数据核对，建议先把两侧的版本信息记下来，避免看错来源。</p>
+      <div class="compare">
+        <div class="compare-col">
+          <h3>分屏对照</h3>
+          <ul>
+            <li>适合逐句比对、逐项核对</li>
+            <li>需要足够宽的可视区域</li>
+            <li>滚动位置要按侧固定</li>
+          </ul>
+        </div>
+        <div class="compare-col">
+          <h3>标签切换</h3>
+          <ul>
+            <li>适合单屏设备与短段落查看</li>
+            <li>标签数量控制在少数几个</li>
+            <li>可配合阅读视图降低干扰</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt" id="private">
+    <div class="wrap">
+      <h2>无痕浏览：理解它的范围，才用得安心</h2>
+      <p>无痕浏览在多数浏览器里的作用是：本次会话结束后，不把浏览记录、表单填写内容和站点本地存储写入当前配置文件。它适合在共用设备上做临时查询，避免把自己的搜索留在别人的账户里。但它并不等于匿名上网，网络服务方、单位网络管理以及你主动登录的账号依然能看到访问行为，下载的文件和新建的书签也会照常保留。因此，把无痕理解为本地少留痕迹，比理解为完全隐身更准确。使用前建议确认设备是否已登录账号并开启同步，因为同步机制会把部分数据带回云端。对需要长期保留的页面，仍然应当手动保存或加入收藏。若多人共用同一台设备，退出浏览器账户比只开无痕窗口更彻底，这一步常被忽略。</p>
+      <div class="note">
+        <p class="note-title">三个常见误解</p>
+        <ul>
+          <li>无痕不改变网络侧的可记录范围，只影响本地配置文件的留存。</li>
+          <li>无痕不会隐藏下载文件，也不会阻止书签被正常保存。</li>
+          <li>无痕不替代账号退出，共用设备上两者应配合使用。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="mobile">
+    <div class="wrap">
+      <h2>移动浏览与译页阅读：小屏幕上的取舍</h2>
+      <p>在手机上浏览网页，最常见的困扰是排版和误触。判断一个页面是否对移动端友好，可以看三点：文字是否需要左右滑动才能看全、正文与按钮是否容易误触、页面放大后布局是否错乱。多数浏览器提供阅读视图或字号调节，能把正文抽成单列，适合长文。手势方面，双击缩放与双指缩放的行为可以按习惯调整；横竖屏切换会改变列宽，长文建议固定朝向阅读。移动网络不稳定时，页面中的图片可能加载失败，此时阅读视图反而更可靠。译页阅读指借助内置翻译把外语页面转成中文，它适合快速了解大意，但对专业术语、人名地名和带格式的表格往往不够准确，涉及数字、条款或结论性表述时应回到原文核对。把翻译结果当作引用来源并不合适，引用应指向原始页面。</p>
+      <div class="cards">
+        <article class="card">
+          <h3>阅读视图优先</h3>
+          <p>先切阅读视图再翻译，能减少导航栏与浮层干扰，段落对应关系也更清楚。</p>
+        </article>
+        <article class="card">
+          <h3>逐段核对原文</h3>
+          <p>关键段落对照原文与译文各看一遍，比整页机翻后通读更容易发现问题。</p>
+        </article>
+        <article class="card">
+          <h3>标签防误关</h3>
+          <p>手机上标签页容易被误关，重要页面先加入收藏或保存，再慢慢细读。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt" id="save">
+    <div class="wrap">
+      <h2>网页保存、归档与夜读模式</h2>
+      <p>网页保存的目的通常有两个：离线查看和长期归档。常见方式各有取舍，完整保存会把页面资源一并存下，文件较大但样式完整；仅保存网页结构体积小，图片却可能丢失；保存为纯文本最轻便，适合只需要文字的资料；打印为 PDF 兼顾版式与便携，适合需要引用页码的场合。保存时统一命名规则，把日期与主题写进文件名，避免大量同名文件。归档一段时间后可按主题整理到固定目录，并记录来源地址。夜读模式主要解决两件事：夜间屏幕过亮和长文阅读疲劳，实现方式多为降低背景亮度、改用深色配色。开启后若正文对比度不足，适度调高字号或行距比一味压暗更护眼；图片密集或需辨认色彩的页面在深色下会失真，按页面单独关闭更合适。</p>
+      <table>
+        <thead>
+          <tr><th>保存方式</th><th>适合的内容</th><th>需注意</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>完整网页</td><td>版式重要、需离线复现</td><td>体积较大，注意目录归档</td></tr>
+          <tr><td>纯文本</td><td>只要文字的资料摘录</td><td>格式与图片不保留</td></tr>
+          <tr><td>PDF</td><td>需要页码引用的长文</td><td>动态内容可能不完整</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="block" id="faq">
+    <div class="wrap">
+      <h2>常见问题</h2>
+      <div class="faq">
+        <details>
+          <summary>常用入口应该放在书签栏还是首页快捷区？</summary>
+          <p>看打开频率。每天都要访问的几个放在最容易点到的位置，例如书签栏可见区；一周用一两次的收进文件夹或首页快捷区。两者不必并存，重复放置反而会增加辨认成本。</p>
+        </details>
+        <details>
+          <summary>收藏夹一直整理不好，有什么简化办法？</summary>
+          <p>把整理拆成删除失效、合并同类、补写文件夹说明三个动作，每月做一次即可。不要追求一次彻底清理，也不要为文件夹建立过深层级，两层以内通常就够用。</p>
+        </details>
+        <details>
+          <summary>无痕窗口关闭后，下载的文件会消失吗？</summary>
+          <p>不会。下载的文件、故意保存的书签都会正常保留，无痕主要影响浏览记录、表单内容与站点本地存储的留存范围，不处理已落盘的本地文件。</p>
+        </details>
+        <details>
+          <summary>对照阅读时两栏总是滚动错位怎么办？</summary>
+          <p>固定其中一侧不滚动，只操作另一侧；或者按段落位置记下参照点再逐段切换。屏幕较窄时不要强行并排，改为标签切换会更稳。</p>
+        </details>
+        <details>
+          <summary>整页翻译的结果可以直接引用吗？</summary>
+          <p>不建议。机器翻译对术语、专名与表格容易偏差，引用应指向原始页面，数字与条款必须回原文核对后再写入自己的稿子。</p>
+        </details>
+        <details>
+          <summary>夜读模式为什么有些页面效果不明显？</summary>
+          <p>部分页面的配色由样式表写死，深色模式只能覆盖一部分元素，页面自有配色会优先显示。这类页面可单独关闭夜读，或以阅读视图配合字号调整来替代。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="foot-brand">91浏览器</p>
+    <p class="foot-desc">本页为浏览器通用使用说明，围绕常用入口、收藏整理、对照阅读、无痕浏览、移动浏览、网页保存、译页阅读与夜读模式整理，不涉及具体站点功能承诺。</p>
+    <p class="foot-copy">版权所有 · 保留一切权利</p>
+  </div>
+</footer>
+</body>
+</html>
